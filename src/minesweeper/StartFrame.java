@@ -1,5 +1,4 @@
 package minesweeper;
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -31,9 +30,21 @@ public class StartFrame extends JFrame implements ActionListener {
         titel.setBorder(testborder);
         
         
-         JButton startButton = new JButton("Start");
+        JButton startButton = new JButton("Start");
+        startButton.setFont(new Font("MV Boli",Font.PLAIN,30));
+        startButton.setFocusable(false);
+        startButton.setBackground(new Color(220,230,255));
+        startButton.setForeground(Color.BLACK);
+        startButton.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        
+         
         JButton easyButton = new JButton("Easy");
+        easyButton.setFont(new Font("MV Boli",Font.PLAIN,30));
+        easyButton.setFocusable(false);
+        
         JButton hardButton = new JButton("Hard");
+        hardButton.setFont(new Font("MV Boli",Font.PLAIN,30));
+        hardButton.setFocusable(false);
 
         JPanel buttonsPanel = new JPanel();
         buttonsPanel.setLayout(new GridLayout(3,1,10,10));
